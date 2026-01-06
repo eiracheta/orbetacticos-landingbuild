@@ -1,0 +1,442 @@
+{
+  "es": {
+    "nav": {
+      "inicio": "Inicio",
+      "nosotros": "Nosotros",
+      "soluciones": "Soluciones",
+      "clientes": "Clientes",
+      "socios": "Socios Estratégicos",
+      "capacidades": "Capacidades",
+      "contacto": "Contacto"
+    },
+    "hero": {
+      "title": "Soluciones de Movilidad Táctica de Clase Mundial",
+      "subtitle": "Conectamos a las fuerzas de defensa y seguridad con los mejores fabricantes de vehículos blindados y tácticos del mundo",
+      "cta": "Solicitar Información",
+      "scrollText": "Descubre más"
+    },
+    "about": {
+      "sectionTag": "Quiénes Somos",
+      "title": "Experiencia Global en Movilidad Táctica",
+      "intro": "Orbe Tácticos es una empresa especializada en el suministro de soluciones integrales de movilidad táctica para fuerzas de defensa, seguridad y organizaciones gubernamentales a nivel mundial.",
+      "description": "Con una red establecida de fabricantes certificados en múltiples continentes, facilitamos el acceso a vehículos blindados y tácticos de última generación, garantizando el cumplimiento de las más estrictas normativas internacionales de comercio de defensa.",
+      "mission": {
+        "title": "Nuestra Misión",
+        "text": "Proporcionar a nuestros clientes acceso confiable a soluciones de movilidad táctica de clase mundial, asegurando calidad, cumplimiento normativo y soporte integral en cada proyecto."
+      },
+      "vision": {
+        "title": "Nuestra Visión",
+        "text": "Ser el socio estratégico preferido a nivel global para la adquisición de vehículos tácticos, reconocidos por nuestra integridad, experiencia y compromiso con la excelencia."
+      },
+      "values": {
+        "title": "Nuestros Valores",
+        "reliability": {
+          "title": "Confiabilidad",
+          "text": "Cumplimos cada compromiso con precisión y profesionalismo"
+        },
+        "excellence": {
+          "title": "Excelencia Operacional",
+          "text": "Estándares superiores en cada etapa del proceso"
+        },
+        "innovation": {
+          "title": "Innovación",
+          "text": "Soluciones adaptadas a las necesidades cambiantes del sector"
+        },
+        "commitment": {
+          "title": "Compromiso",
+          "text": "Dedicación total al éxito de nuestros clientes"
+        }
+      },
+      "stats": {
+        "years": {
+          "value": "10+",
+          "label": "Años de Experiencia"
+        },
+        "partners": {
+          "value": "30+",
+          "label": "Socios Fabricantes"
+        }
+      }
+    },
+    "solutions": {
+      "sectionTag": "Soluciones",
+      "title": "Categorías de Vehículos",
+      "subtitle": "Amplio portafolio de vehículos tácticos para cada necesidad operacional",
+      "categories": {
+        "apc": {
+          "title": "Vehículos Blindados de Transporte",
+          "shortTitle": "APC",
+          "description": "Transporte seguro de personal en zonas de conflicto. Protección balística y contra minas con capacidad para equipos tácticos completos.",
+          "features": ["Protección balística multinivel", "Capacidad 8-12 efectivos", "Sistemas de comunicación integrados"]
+        },
+        "mrap": {
+          "title": "Resistentes a Minas y Emboscadas",
+          "shortTitle": "MRAP",
+          "description": "Máxima protección contra IEDs y minas. Diseño tipo V para deflexión de explosiones y supervivencia de la tripulación.",
+          "features": ["Protección anti-minas clase III+", "Casco tipo V optimizado", "Sistemas de supresión de incendios"]
+        },
+        "light": {
+          "title": "Vehículos Tácticos Ligeros",
+          "shortTitle": "Patrulla",
+          "description": "Movilidad superior para reconocimiento, patrullaje y respuesta rápida. Alta maniobrabilidad en terrenos difíciles.",
+          "features": ["Alto rendimiento off-road", "Configuraciones modulares", "Sistemas de armas opcionales"]
+        },
+        "logistics": {
+          "title": "Vehículos de Apoyo Logístico",
+          "shortTitle": "Logística",
+          "description": "Transporte de carga, combustible y suministros en entornos hostiles. Capacidades de recuperación y mantenimiento de campo.",
+          "features": ["Alta capacidad de carga", "Protección para tripulación", "Sistemas de grúa integrados"]
+        },
+        "specialized": {
+          "title": "Vehículos Especializados",
+          "shortTitle": "Especiales",
+          "description": "Plataformas de comando, ambulancias blindadas, vehículos de ingeniería y soluciones personalizadas para misiones específicas.",
+          "features": ["Configuraciones a medida", "Sistemas especializados", "Integración de equipos"]
+        }
+      },
+      "learnMore": "Más Información"
+    },
+    "partners": {
+      "sectionTag": "Alianzas Globales",
+      "title": "Socios Estratégicos",
+      "subtitle": "Principales fabricantes de vehículos y partes tácticas a nivel mundial"
+    },
+    "capabilities": {
+      "sectionTag": "Capacidades",
+      "title": "Servicios Integrales",
+      "subtitle": "Soluciones completas de principio a fin para cada proyecto",
+      "services": {
+        "logistics": {
+          "title": "Logística Internacional",
+          "description": "Gestión completa de envíos, documentación y transporte seguro de vehículos a cualquier destino mundial."
+        },
+        "support": {
+          "title": "Soporte y Mantenimiento",
+          "description": "Programas de mantenimiento preventivo, suministro de repuestos y soporte técnico especializado."
+        },
+        "customization": {
+          "title": "Personalización de Vehículos",
+          "description": "Adaptación de plataformas a requisitos específicos: armamento, comunicaciones, protección adicional."
+        },
+        "compliance": {
+          "title": "Cumplimiento Normativo",
+          "description": "Gestión integral de licencias de exportación, ITAR, EAR y regulaciones internacionales de comercio de defensa."
+        },
+        "training": {
+          "title": "Entrenamiento y Capacitación",
+          "description": "Programas de formación para operadores, conductores y personal de mantenimiento."
+        },
+        "turnkey": {
+          "title": "Proyectos Llave en Mano",
+          "description": "Gestión integral desde la especificación hasta la entrega, incluyendo documentación y capacitación."
+        }
+      },
+      "certifications": {
+        "title": "Certificaciones y Cumplimiento",
+        "items": ["ISO 9001:2015", "ITAR Registered", "EAR Compliant", "NATO CAGE Code"]
+      }
+    },
+    "whyUs": {
+      "sectionTag": "Diferenciadores",
+      "title": "Por Qué Elegirnos",
+      "subtitle": "Ventajas competitivas que nos distinguen en el mercado global",
+      "advantages": {
+        "experience": {
+          "title": "Experiencia Comprobada",
+          "description": "Más de 15 años facilitando proyectos exitosos de adquisición de vehículos tácticos."
+        },
+        "network": {
+          "title": "Red Global Certificada",
+          "description": "Acceso directo a los principales fabricantes de vehículos blindados del mundo."
+        },
+        "compliance": {
+          "title": "Cumplimiento Garantizado",
+          "description": "Gestión experta de regulaciones ITAR, EAR y normativas internacionales."
+        },
+        "support": {
+          "title": "Soporte Post-Venta",
+          "description": "Compromiso continuo con repuestos, mantenimiento y asistencia técnica."
+        },
+        "delivery": {
+          "title": "Tiempos Competitivos",
+          "description": "Procesos optimizados para entregas eficientes sin comprometer calidad."
+        },
+        "custom": {
+          "title": "Soluciones a Medida",
+          "description": "Configuraciones personalizadas según requisitos operacionales específicos."
+        }
+      }
+    },
+    "contact": {
+      "sectionTag": "Contacto",
+      "title": "Solicite Información",
+      "subtitle": "Nuestro equipo está listo para asistirle con sus requerimientos de movilidad táctica",
+      "form": {
+        "name": "Nombre Completo",
+        "namePlaceholder": "Ingrese su nombre",
+        "email": "Correo Electrónico",
+        "emailPlaceholder": "correo@ejemplo.com",
+        "organization": "Organización",
+        "organizationPlaceholder": "Nombre de su organización",
+        "country": "País",
+        "countryPlaceholder": "Seleccione su país",
+        "inquiryType": "Tipo de Consulta",
+        "inquiryPlaceholder": "Seleccione una opción",
+        "inquiryOptions": {
+          "general": "Consulta General",
+          "quote": "Solicitud de Cotización",
+          "technical": "Información Técnica",
+          "partnership": "Oportunidad de Asociación",
+          "support": "Soporte Post-Venta"
+        },
+        "message": "Mensaje",
+        "messagePlaceholder": "Describa sus requerimientos o consulta...",
+        "submit": "Enviar Solicitud",
+        "sending": "Enviando..."
+      },
+      "info": {
+        "title": "Información de Contacto",
+        "email": "contacto@orbetacticos.com",
+        "phone": "+52 81 1510 7978"
+      },
+      "disclaimer": "Toda la información compartida será tratada con estricta confidencialidad. Orbe Tácticos cumple con las normativas internacionales de protección de datos.",
+      "success": {
+        "title": "¡Mensaje Enviado!",
+        "message": "Gracias por contactarnos. Nuestro equipo revisará su solicitud y le responderá a la brevedad posible."
+      }
+    },
+    "footer": {
+      "tagline": "Soluciones de Movilidad Táctica",
+      "links": {
+        "title": "Enlaces Rápidos"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Política de Privacidad",
+        "terms": "Términos de Uso"
+      },
+      "disclaimer": "La información presentada en este sitio es de carácter general. Todas las transacciones están sujetas a las regulaciones de exportación aplicables.",
+      "copyright": "© 2026 Orbe Tácticos. Todos los derechos reservados."
+    }
+  },
+  "en": {
+    "nav": {
+      "inicio": "Home",
+      "nosotros": "About Us",
+      "soluciones": "Solutions",
+      "clientes": "Clients",
+      "socios": "Strategic Partners",
+      "capacidades": "Capabilities",
+      "contacto": "Contact"
+    },
+    "hero": {
+      "title": "World-Class Tactical Mobility Solutions",
+      "subtitle": "We connect defense and security forces with the world's leading armored and tactical vehicle manufacturers",
+      "cta": "Request Information",
+      "scrollText": "Discover more"
+    },
+    "about": {
+      "sectionTag": "About Us",
+      "title": "Global Expertise in Tactical Mobility",
+      "intro": "Orbe Tácticos is a company specialized in providing comprehensive tactical mobility solutions for defense forces, security agencies, and government organizations worldwide.",
+      "description": "With an established network of certified manufacturers across multiple continents, we facilitate access to state-of-the-art armored and tactical vehicles, ensuring compliance with the strictest international defense trade regulations.",
+      "mission": {
+        "title": "Our Mission",
+        "text": "To provide our clients with reliable access to world-class tactical mobility solutions, ensuring quality, regulatory compliance, and comprehensive support in every project."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "text": "To be the preferred strategic partner globally for tactical vehicle acquisition, recognized for our integrity, expertise, and commitment to excellence."
+      },
+      "values": {
+        "title": "Our Values",
+        "reliability": {
+          "title": "Reliability",
+          "text": "We fulfill every commitment with precision and professionalism"
+        },
+        "excellence": {
+          "title": "Operational Excellence",
+          "text": "Superior standards at every stage of the process"
+        },
+        "innovation": {
+          "title": "Innovation",
+          "text": "Solutions adapted to the sector's changing needs"
+        },
+        "commitment": {
+          "title": "Commitment",
+          "text": "Total dedication to our clients' success"
+        }
+      },
+      "stats": {
+        "years": {
+          "value": "10+",
+          "label": "Years of Experience"
+        },
+        "partners": {
+          "value": "30+",
+          "label": "Manufacturing Partners"
+        }
+      }
+    },
+    "solutions": {
+      "sectionTag": "Solutions",
+      "title": "Vehicle Categories",
+      "subtitle": "Comprehensive portfolio of tactical vehicles for every operational need",
+      "categories": {
+        "apc": {
+          "title": "Armored Personnel Carriers",
+          "shortTitle": "APC",
+          "description": "Safe personnel transport in conflict zones. Ballistic and mine protection with capacity for complete tactical teams.",
+          "features": ["Multi-level ballistic protection", "8-12 personnel capacity", "Integrated communication systems"]
+        },
+        "mrap": {
+          "title": "Mine-Resistant Ambush Protected",
+          "shortTitle": "MRAP",
+          "description": "Maximum protection against IEDs and mines. V-shaped design for blast deflection and crew survivability.",
+          "features": ["Class III+ mine protection", "Optimized V-hull design", "Fire suppression systems"]
+        },
+        "light": {
+          "title": "Light Tactical Vehicles",
+          "shortTitle": "Patrol",
+          "description": "Superior mobility for reconnaissance, patrolling, and rapid response. High maneuverability in difficult terrain.",
+          "features": ["High off-road performance", "Modular configurations", "Optional weapon systems"]
+        },
+        "logistics": {
+          "title": "Logistics Support Vehicles",
+          "shortTitle": "Logistics",
+          "description": "Cargo, fuel, and supply transport in hostile environments. Field recovery and maintenance capabilities.",
+          "features": ["High cargo capacity", "Crew protection", "Integrated crane systems"]
+        },
+        "specialized": {
+          "title": "Specialized Vehicles",
+          "shortTitle": "Special",
+          "description": "Command platforms, armored ambulances, engineering vehicles, and customized solutions for specific missions.",
+          "features": ["Custom configurations", "Specialized systems", "Equipment integration"]
+        }
+      },
+      "learnMore": "Learn More"
+    },
+    "partners": {
+      "sectionTag": "Global Alliances",
+      "title": "Strategic Partners",
+      "subtitle": "Leading manufacturers of tactical vehicles and parts worldwide"
+    },
+    "capabilities": {
+      "sectionTag": "Capabilities",
+      "title": "Comprehensive Services",
+      "subtitle": "Complete end-to-end solutions for every project",
+      "services": {
+        "logistics": {
+          "title": "International Logistics",
+          "description": "Complete management of shipments, documentation, and secure vehicle transport to any worldwide destination."
+        },
+        "support": {
+          "title": "Support and Maintenance",
+          "description": "Preventive maintenance programs, spare parts supply, and specialized technical support."
+        },
+        "customization": {
+          "title": "Vehicle Customization",
+          "description": "Platform adaptation to specific requirements: armament, communications, additional protection."
+        },
+        "compliance": {
+          "title": "Regulatory Compliance",
+          "description": "Comprehensive management of export licenses, ITAR, EAR, and international defense trade regulations."
+        },
+        "training": {
+          "title": "Training and Education",
+          "description": "Training programs for operators, drivers, and maintenance personnel."
+        },
+        "turnkey": {
+          "title": "Turnkey Projects",
+          "description": "Comprehensive management from specification to delivery, including documentation and training."
+        }
+      },
+      "certifications": {
+        "title": "Certifications and Compliance",
+        "items": ["ISO 9001:2015", "ITAR Registered", "EAR Compliant", "NATO CAGE Code"]
+      }
+    },
+    "whyUs": {
+      "sectionTag": "Differentiators",
+      "title": "Why Choose Us",
+      "subtitle": "Competitive advantages that distinguish us in the global market",
+      "advantages": {
+        "experience": {
+          "title": "Proven Experience",
+          "description": "Over 15 years facilitating successful tactical vehicle acquisition projects."
+        },
+        "network": {
+          "title": "Certified Global Network",
+          "description": "Direct access to the world's leading armored vehicle manufacturers."
+        },
+        "compliance": {
+          "title": "Guaranteed Compliance",
+          "description": "Expert management of ITAR, EAR, and international regulations."
+        },
+        "support": {
+          "title": "After-Sales Support",
+          "description": "Ongoing commitment with spare parts, maintenance, and technical assistance."
+        },
+        "delivery": {
+          "title": "Competitive Timelines",
+          "description": "Optimized processes for efficient deliveries without compromising quality."
+        },
+        "custom": {
+          "title": "Tailored Solutions",
+          "description": "Customized configurations according to specific operational requirements."
+        }
+      }
+    },
+    "contact": {
+      "sectionTag": "Contact",
+      "title": "Request Information",
+      "subtitle": "Our team is ready to assist you with your tactical mobility requirements",
+      "form": {
+        "name": "Full Name",
+        "namePlaceholder": "Enter your name",
+        "email": "Email Address",
+        "emailPlaceholder": "email@example.com",
+        "organization": "Organization",
+        "organizationPlaceholder": "Your organization name",
+        "country": "Country",
+        "countryPlaceholder": "Select your country",
+        "inquiryType": "Inquiry Type",
+        "inquiryPlaceholder": "Select an option",
+        "inquiryOptions": {
+          "general": "General Inquiry",
+          "quote": "Quote Request",
+          "technical": "Technical Information",
+          "partnership": "Partnership Opportunity",
+          "support": "After-Sales Support"
+        },
+        "message": "Message",
+        "messagePlaceholder": "Describe your requirements or inquiry...",
+        "submit": "Submit Request",
+        "sending": "Sending..."
+      },
+      "info": {
+        "title": "Contact Information",
+        "email": "contacto@orbetacticos.com",
+        "phone": "+52 81 1510 7978"
+      },
+      "disclaimer": "All shared information will be treated with strict confidentiality. Orbe Tácticos complies with international data protection regulations.",
+      "success": {
+        "title": "Message Sent!",
+        "message": "Thank you for contacting us. Our team will review your request and respond as soon as possible."
+      }
+    },
+    "footer": {
+      "tagline": "Tactical Mobility Solutions",
+      "links": {
+        "title": "Quick Links"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use"
+      },
+      "disclaimer": "The information presented on this site is of a general nature. All transactions are subject to applicable export regulations.",
+      "copyright": "© 2026 Orbe Tácticos. All rights reserved."
+    }
+  }
+}
