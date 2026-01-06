@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Orbe Tácticos - Soluciones de Movilidad Táctica para Fuerzas de Defensa. Suministro de vehículos blindados y tácticos.">
+    <meta name="keywords" content="vehículos blindados, vehículos tácticos, defensa, fuerzas armadas, movilidad táctica">
+    <meta name="author" content="Orbe Tácticos">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Orbe Tácticos - Coming Soon">
+    <meta property="og:description" content="Tactical Mobility Solutions for Defense Forces">
+    <meta property="og:type" content="website">
+
+    <title>Orbe Tácticos | En Construcción</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Particle Canvas Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Tactical Grid Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-text">ORBE</span>
+                <span class="logo-accent">TÁCTICOS</span>
+            </div>
+
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="es" aria-label="Español">
+                    ES
+                </button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="en" aria-label="English">
+                    EN
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Status Badge -->
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span data-i18n="status">EN DESARROLLO</span>
+            </div>
+
+            <!-- Title Section -->
+            <h1 class="title" data-i18n="title">Sitio en Construcción</h1>
+
+            <p class="subtitle" data-i18n="subtitle">
+                Soluciones de Movilidad Táctica para Fuerzas de Defensa
+            </p>
+
+            <p class="description" data-i18n="description">
+                Especialistas en suministro de vehículos blindados y tácticos de alta especificación
+                para operaciones de defensa y seguridad a nivel global.
+            </p>
+
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span data-i18n="progress">Progreso del sitio</span>
+                    <span class="progress-value">75%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+
+            <!-- Launch Date -->
+            <div class="launch-date">
+                <span class="launch-label" data-i18n="available">Disponible</span>
+                <span class="launch-value">Q1 2026</span>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label" data-i18n="days">Días</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label" data-i18n="hours">Horas</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label" data-i18n="minutes">Minutos</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label" data-i18n="seconds">Segundos</span>
+                </div>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="form-section">
+                <p class="form-intro" data-i18n="formIntro">
+                    Sé el primero en conocer nuestro lanzamiento
+                </p>
+
+                <form id="notify-form" class="notify-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="correo@ejemplo.com"
+                                data-i18n-placeholder="emailPlaceholder"
+                                autocomplete="email"
+                            >
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </span>
+                        </div>
+
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                id="organization"
+                                name="organization"
+                                placeholder="País / Organización"
+                                data-i18n-placeholder="orgPlaceholder"
+                                autocomplete="organization"
+                            >
+                            <span class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 21h18"/>
+                                    <path d="M5 21V7l8-4v18"/>
+                                    <path d="M19 21V11l-6-4"/>
+                                    <path d="M9 9v.01"/>
+                                    <path d="M9 12v.01"/>
+                                    <path d="M9 15v.01"/>
+                                    <path d="M9 18v.01"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span data-i18n="notify">Notificarme</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"/>
+                            <polyline points="12 5 19 12 12 19"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="success-message" class="success-message hidden">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span data-i18n="successMessage">¡Registro exitoso! Te notificaremos pronto.</span>
+                </div>
+
+                <p class="privacy-note" data-i18n="privacy">
+                    Tu información está protegida. No compartimos datos con terceros.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-contact">
+                <a href="mailto:contacto@orbetacticos.com" class="contact-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    contacto@orbetacticos.com
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Orbe Tácticos. <span data-i18n="rights">Todos los derechos reservados.</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

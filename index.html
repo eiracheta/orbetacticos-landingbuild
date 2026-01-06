@@ -3,206 +3,721 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orbe Tácticos - Soluciones de Movilidad Táctica para Fuerzas de Defensa. Suministro de vehículos blindados y tácticos.">
-    <meta name="keywords" content="vehículos blindados, vehículos tácticos, defensa, fuerzas armadas, movilidad táctica">
+    <meta name="description" content="Orbe Tácticos - Soluciones de Movilidad Táctica de Clase Mundial. Vehículos blindados y tácticos para fuerzas de defensa y seguridad.">
+    <meta name="keywords" content="vehículos blindados, vehículos tácticos, MRAP, APC, defensa, seguridad, movilidad táctica">
     <meta name="author" content="Orbe Tácticos">
-    <meta name="robots" content="index, follow">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Orbe Tácticos - Coming Soon">
-    <meta property="og:description" content="Tactical Mobility Solutions for Defense Forces">
+    <meta property="og:title" content="Orbe Tácticos - Soluciones de Movilidad Táctica">
+    <meta property="og:description" content="Conectamos a las fuerzas de defensa con los mejores fabricantes de vehículos blindados del mundo.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orbetacticos.com">
 
-    <title>Orbe Tácticos | En Construcción</title>
+    <title>Orbe Tácticos | Soluciones de Movilidad Táctica</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/website.css">
 </head>
 <body>
     <!-- Particle Canvas Background -->
-    <canvas id="particles"></canvas>
+    <canvas id="particles-canvas"></canvas>
 
-    <!-- Tactical Grid Overlay -->
+    <!-- Grid Overlay -->
     <div class="grid-overlay"></div>
 
-    <!-- Main Container -->
-    <div class="container">
+    <!-- ============================================
+         NAVBAR
+    ============================================= -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#inicio" class="navbar-logo">
+                <span class="logo-orbe">ORBE</span>
+                <span class="logo-tacticos">TÁCTICOS</span>
+            </a>
 
-        <!-- Header -->
-        <header class="header">
-            <div class="logo">
-                <span class="logo-text">ORBE</span>
-                <span class="logo-accent">TÁCTICOS</span>
-            </div>
+            <!-- Desktop Navigation -->
+            <ul class="navbar-menu" id="navbar-menu">
+                <li><a href="#inicio" class="nav-link active" data-i18n="nav.inicio">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link" data-i18n="nav.nosotros">Nosotros</a></li>
+                <li><a href="#soluciones" class="nav-link" data-i18n="nav.soluciones">Soluciones</a></li>
+                <li><a href="#socios" class="nav-link" data-i18n="nav.socios">Socios Estratégicos</a></li>
+                <li><a href="#capacidades" class="nav-link" data-i18n="nav.capacidades">Capacidades</a></li>
+                <li><a href="#contacto" class="nav-link nav-link-cta" data-i18n="nav.contacto">Contacto</a></li>
+            </ul>
 
+            <!-- Language Switcher -->
             <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="es" aria-label="Español">
-                    ES
-                </button>
-                <span class="lang-divider">|</span>
-                <button class="lang-btn" data-lang="en" aria-label="English">
-                    EN
-                </button>
-            </div>
-        </header>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Status Badge -->
-            <div class="status-badge">
-                <span class="status-dot"></span>
-                <span data-i18n="status">EN DESARROLLO</span>
+                <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+                <span class="lang-divider">/</span>
+                <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
             </div>
 
-            <!-- Title Section -->
-            <h1 class="title" data-i18n="title">Sitio en Construcción</h1>
+            <!-- Mobile Menu Toggle -->
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Menú">
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+                <span class="toggle-bar"></span>
+            </button>
+        </div>
+    </nav>
 
-            <p class="subtitle" data-i18n="subtitle">
-                Soluciones de Movilidad Táctica para Fuerzas de Defensa
-            </p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
 
-            <p class="description" data-i18n="description">
-                Especialistas en suministro de vehículos blindados y tácticos de alta especificación
-                para operaciones de defensa y seguridad a nivel global.
-            </p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-menu-list">
+            <li><a href="#inicio" class="mobile-nav-link" data-i18n="nav.inicio">Inicio</a></li>
+            <li><a href="#nosotros" class="mobile-nav-link" data-i18n="nav.nosotros">Nosotros</a></li>
+            <li><a href="#soluciones" class="mobile-nav-link" data-i18n="nav.soluciones">Soluciones</a></li>
+            <li><a href="#socios" class="mobile-nav-link" data-i18n="nav.socios">Socios Estratégicos</a></li>
+            <li><a href="#capacidades" class="mobile-nav-link" data-i18n="nav.capacidades">Capacidades</a></li>
+            <li><a href="#contacto" class="mobile-nav-link" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+        <div class="mobile-lang-switcher">
+            <button class="lang-btn active" data-lang="es">ES</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </div>
 
-            <!-- Progress Section -->
-            <div class="progress-section">
-                <div class="progress-header">
-                    <span data-i18n="progress">Progreso del sitio</span>
-                    <span class="progress-value">75%</span>
-                </div>
-                <div class="progress-bar">
-                    <div class="progress-fill"></div>
-                </div>
+    <!-- ============================================
+         HERO SECTION
+    ============================================= -->
+    <section class="hero" id="inicio">
+        <div class="hero-background">
+            <div class="hero-image-placeholder">
+                <!-- Placeholder for tactical vehicle image -->
+                <svg class="hero-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                    <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    <path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"/>
+                </svg>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title" data-i18n="hero.title">Soluciones de Movilidad Táctica de Clase Mundial</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Conectamos a las fuerzas de defensa y seguridad con los mejores fabricantes de vehículos blindados y tácticos del mundo</p>
+            <a href="#contacto" class="hero-cta">
+                <span data-i18n="hero.cta">Solicitar Información</span>
+                <svg class="cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="scroll-indicator">
+            <span class="scroll-text" data-i18n="hero.scrollText">Descubre más</span>
+            <div class="scroll-arrow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT US / QUIÉNES SOMOS
+    ============================================= -->
+    <section class="section about" id="nosotros">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="about.sectionTag">Quiénes Somos</span>
+                <h2 class="section-title" data-i18n="about.title">Experiencia Global en Movilidad Táctica</h2>
             </div>
 
-            <!-- Launch Date -->
-            <div class="launch-date">
-                <span class="launch-label" data-i18n="available">Disponible</span>
-                <span class="launch-value">Q1 2026</span>
-            </div>
+            <div class="about-grid">
+                <!-- Left Column: Text Content -->
+                <div class="about-content animate-on-scroll">
+                    <p class="about-intro" data-i18n="about.intro">
+                        Orbe Tácticos es una empresa especializada en el suministro de soluciones integrales de movilidad táctica para fuerzas de defensa, seguridad y organizaciones gubernamentales a nivel mundial.
+                    </p>
+                    <p class="about-description" data-i18n="about.description">
+                        Con una red establecida de fabricantes certificados en múltiples continentes, facilitamos el acceso a vehículos blindados y tácticos de última generación, garantizando el cumplimiento de las más estrictas normativas internacionales de comercio de defensa.
+                    </p>
 
-            <!-- Countdown Timer -->
-            <div class="countdown">
-                <div class="countdown-item">
-                    <span class="countdown-value" id="days">00</span>
-                    <span class="countdown-label" data-i18n="days">Días</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="hours">00</span>
-                    <span class="countdown-label" data-i18n="hours">Horas</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="minutes">00</span>
-                    <span class="countdown-label" data-i18n="minutes">Minutos</span>
-                </div>
-                <div class="countdown-separator">:</div>
-                <div class="countdown-item">
-                    <span class="countdown-value" id="seconds">00</span>
-                    <span class="countdown-label" data-i18n="seconds">Segundos</span>
-                </div>
-            </div>
-
-            <!-- Newsletter Form -->
-            <div class="form-section">
-                <p class="form-intro" data-i18n="formIntro">
-                    Sé el primero en conocer nuestro lanzamiento
-                </p>
-
-                <form id="notify-form" class="notify-form">
-                    <div class="form-row">
-                        <div class="input-group">
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="correo@ejemplo.com"
-                                data-i18n-placeholder="emailPlaceholder"
-                                autocomplete="email"
-                            >
-                            <span class="input-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
+                    <!-- Mission & Vision -->
+                    <div class="mission-vision">
+                        <div class="mission-card">
+                            <div class="mv-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <circle cx="12" cy="12" r="6"/>
+                                    <circle cx="12" cy="12" r="2"/>
                                 </svg>
-                            </span>
+                            </div>
+                            <h3 data-i18n="about.mission.title">Nuestra Misión</h3>
+                            <p data-i18n="about.mission.text">Proporcionar a nuestros clientes acceso confiable a soluciones de movilidad táctica de clase mundial, asegurando calidad, cumplimiento normativo y soporte integral en cada proyecto.</p>
                         </div>
-
-                        <div class="input-group">
-                            <input
-                                type="text"
-                                id="organization"
-                                name="organization"
-                                placeholder="País / Organización"
-                                data-i18n-placeholder="orgPlaceholder"
-                                autocomplete="organization"
-                            >
-                            <span class="input-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M3 21h18"/>
-                                    <path d="M5 21V7l8-4v18"/>
-                                    <path d="M19 21V11l-6-4"/>
-                                    <path d="M9 9v.01"/>
-                                    <path d="M9 12v.01"/>
-                                    <path d="M9 15v.01"/>
-                                    <path d="M9 18v.01"/>
+                        <div class="vision-card">
+                            <div class="mv-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
                                 </svg>
-                            </span>
+                            </div>
+                            <h3 data-i18n="about.vision.title">Nuestra Visión</h3>
+                            <p data-i18n="about.vision.text">Ser el socio estratégico preferido a nivel global para la adquisición de vehículos tácticos, reconocidos por nuestra integridad, experiencia y compromiso con la excelencia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Values & Stats -->
+                <div class="about-sidebar animate-on-scroll" data-delay="200">
+                    <!-- Values -->
+                    <div class="values-section">
+                        <h3 class="values-title" data-i18n="about.values.title">Nuestros Valores</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4 data-i18n="about.values.reliability.title">Confiabilidad</h4>
+                                    <p data-i18n="about.values.reliability.text">Cumplimos cada compromiso con precisión</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4 data-i18n="about.values.excellence.title">Excelencia Operacional</h4>
+                                    <p data-i18n="about.values.excellence.text">Estándares superiores en cada etapa</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4 data-i18n="about.values.innovation.title">Innovación</h4>
+                                    <p data-i18n="about.values.innovation.text">Soluciones adaptadas a necesidades cambiantes</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <div class="value-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                                    </svg>
+                                </div>
+                                <div class="value-content">
+                                    <h4 data-i18n="about.values.commitment.title">Compromiso</h4>
+                                    <p data-i18n="about.values.commitment.text">Dedicación total al éxito del cliente</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <button type="submit" class="submit-btn">
-                        <span data-i18n="notify">Notificarme</span>
-                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="5" y1="12" x2="19" y2="12"/>
-                            <polyline points="12 5 19 12 12 19"/>
-                        </svg>
-                    </button>
-                </form>
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-value" data-i18n="about.stats.years.value">10+</span>
+                            <span class="stat-label" data-i18n="about.stats.years.label">Años de Experiencia</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value" data-i18n="about.stats.partners.value">30+</span>
+                            <span class="stat-label" data-i18n="about.stats.partners.label">Socios Fabricantes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Success Message -->
-                <div id="success-message" class="success-message hidden">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <span data-i18n="successMessage">¡Registro exitoso! Te notificaremos pronto.</span>
+    <!-- ============================================
+         SOLUTIONS / VEHICLE CATEGORIES
+    ============================================= -->
+    <section class="section solutions" id="soluciones">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="solutions.sectionTag">Soluciones</span>
+                <h2 class="section-title" data-i18n="solutions.title">Categorías de Vehículos</h2>
+                <p class="section-subtitle" data-i18n="solutions.subtitle">Amplio portafolio de vehículos tácticos para cada necesidad operacional</p>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- APC Card -->
+                <div class="solution-card animate-on-scroll" data-category="apc">
+                    <div class="solution-image">
+                        <img src="assets/images/solutions/apc.jpg" alt="Vehículo Blindado de Transporte" loading="lazy">
+                        <div class="solution-badge" data-i18n="solutions.categories.apc.shortTitle">APC</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title" data-i18n="solutions.categories.apc.title">Vehículos Blindados de Transporte</h3>
+                        <p class="solution-description" data-i18n="solutions.categories.apc.description">Transporte seguro de personal en zonas de conflicto. Protección balística y contra minas con capacidad para equipos tácticos completos.</p>
+                        <ul class="solution-features">
+                            <li data-i18n="solutions.categories.apc.features.0">Protección balística multinivel</li>
+                            <li data-i18n="solutions.categories.apc.features.1">Capacidad 8-12 efectivos</li>
+                            <li data-i18n="solutions.categories.apc.features.2">Sistemas de comunicación integrados</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <p class="privacy-note" data-i18n="privacy">
-                    Tu información está protegida. No compartimos datos con terceros.
-                </p>
-            </div>
-        </main>
+                <!-- MRAP Card -->
+                <div class="solution-card animate-on-scroll" data-category="mrap" data-delay="100">
+                    <div class="solution-image">
+                        <img src="assets/images/solutions/mrap.jpg" alt="Vehículo MRAP" loading="lazy">
+                        <div class="solution-badge" data-i18n="solutions.categories.mrap.shortTitle">MRAP</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title" data-i18n="solutions.categories.mrap.title">Resistentes a Minas y Emboscadas</h3>
+                        <p class="solution-description" data-i18n="solutions.categories.mrap.description">Máxima protección contra IEDs y minas. Diseño tipo V para deflexión de explosiones y supervivencia de la tripulación.</p>
+                        <ul class="solution-features">
+                            <li data-i18n="solutions.categories.mrap.features.0">Protección anti-minas clase III+</li>
+                            <li data-i18n="solutions.categories.mrap.features.1">Casco tipo V optimizado</li>
+                            <li data-i18n="solutions.categories.mrap.features.2">Sistemas de supresión de incendios</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-contact">
-                <a href="mailto:contacto@orbetacticos.com" class="contact-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    contacto@orbetacticos.com
-                </a>
+                <!-- Light Tactical Card -->
+                <div class="solution-card animate-on-scroll" data-category="light" data-delay="200">
+                    <div class="solution-image">
+                        <img src="assets/images/solutions/patrol.jpg" alt="Vehículo Táctico Ligero" loading="lazy">
+                        <div class="solution-badge" data-i18n="solutions.categories.light.shortTitle">Patrulla</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title" data-i18n="solutions.categories.light.title">Vehículos Tácticos Ligeros</h3>
+                        <p class="solution-description" data-i18n="solutions.categories.light.description">Movilidad superior para reconocimiento, patrullaje y respuesta rápida. Alta maniobrabilidad en terrenos difíciles.</p>
+                        <ul class="solution-features">
+                            <li data-i18n="solutions.categories.light.features.0">Alto rendimiento off-road</li>
+                            <li data-i18n="solutions.categories.light.features.1">Configuraciones modulares</li>
+                            <li data-i18n="solutions.categories.light.features.2">Sistemas de armas opcionales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Logistics Card -->
+                <div class="solution-card animate-on-scroll" data-category="logistics" data-delay="300">
+                    <div class="solution-image">
+                        <img src="assets/images/solutions/logistics.jpg" alt="Vehículo de Apoyo Logístico" loading="lazy">
+                        <div class="solution-badge" data-i18n="solutions.categories.logistics.shortTitle">Logística</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title" data-i18n="solutions.categories.logistics.title">Vehículos de Apoyo Logístico</h3>
+                        <p class="solution-description" data-i18n="solutions.categories.logistics.description">Transporte de carga, combustible y suministros en entornos hostiles. Capacidades de recuperación y mantenimiento de campo.</p>
+                        <ul class="solution-features">
+                            <li data-i18n="solutions.categories.logistics.features.0">Alta capacidad de carga</li>
+                            <li data-i18n="solutions.categories.logistics.features.1">Protección para tripulación</li>
+                            <li data-i18n="solutions.categories.logistics.features.2">Sistemas de grúa integrados</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Specialized Card -->
+                <div class="solution-card animate-on-scroll" data-category="specialized" data-delay="400">
+                    <div class="solution-image">
+                        <img src="assets/images/solutions/special.jpg" alt="Vehículo Especializado" loading="lazy">
+                        <div class="solution-badge" data-i18n="solutions.categories.specialized.shortTitle">Especiales</div>
+                    </div>
+                    <div class="solution-content">
+                        <h3 class="solution-title" data-i18n="solutions.categories.specialized.title">Vehículos Especializados</h3>
+                        <p class="solution-description" data-i18n="solutions.categories.specialized.description">Plataformas de comando, ambulancias blindadas, vehículos de ingeniería y soluciones personalizadas para misiones específicas.</p>
+                        <ul class="solution-features">
+                            <li data-i18n="solutions.categories.specialized.features.0">Configuraciones a medida</li>
+                            <li data-i18n="solutions.categories.specialized.features.1">Sistemas especializados</li>
+                            <li data-i18n="solutions.categories.specialized.features.2">Integración de equipos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STRATEGIC PARTNERS
+    ============================================= -->
+    <section class="section partners" id="socios">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="partners.sectionTag">Alianzas Globales</span>
+                <h2 class="section-title" data-i18n="partners.title">Socios Estratégicos</h2>
+                <p class="section-subtitle" data-i18n="partners.subtitle">Principales fabricantes de vehículos y partes tácticas a nivel mundial</p>
+            </div>
+
+            <!-- Partner Logos Grid -->
+            <div class="partners-grid animate-on-scroll" data-delay="200">
+                <div class="partner-logo" data-partner="streit">
+                    <img src="assets/images/partners/streit-group.png" alt="Streit Group" loading="lazy">
+                </div>
+                <div class="partner-logo" data-partner="cummins">
+                    <img src="assets/images/partners/cummins.png" alt="Cummins" loading="lazy">
+                </div>
+                <div class="partner-logo" data-partner="caterpillar">
+                    <img src="assets/images/partners/caterpillar.png" alt="Caterpillar" loading="lazy">
+                </div>
+                <div class="partner-logo" data-partner="clarios">
+                    <img src="assets/images/partners/clarios.png" alt="Clarios" loading="lazy">
+                </div>
+                <div class="partner-logo" data-partner="dongfeng">
+                    <img src="assets/images/partners/dongfeng.png" alt="Dongfeng" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CAPABILITIES & SERVICES
+    ============================================= -->
+    <section class="section capabilities" id="capacidades">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="capabilities.sectionTag">Capacidades</span>
+                <h2 class="section-title" data-i18n="capabilities.title">Servicios Integrales</h2>
+                <p class="section-subtitle" data-i18n="capabilities.subtitle">Soluciones completas de principio a fin para cada proyecto</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Logistics -->
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.logistics.title">Logística Internacional</h3>
+                    <p data-i18n="capabilities.services.logistics.description">Gestión completa de envíos, documentación y transporte seguro de vehículos a cualquier destino mundial.</p>
+                </div>
+
+                <!-- Support -->
+                <div class="service-card animate-on-scroll" data-delay="100">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.support.title">Soporte y Mantenimiento</h3>
+                    <p data-i18n="capabilities.services.support.description">Programas de mantenimiento preventivo, suministro de repuestos y soporte técnico especializado.</p>
+                </div>
+
+                <!-- Customization -->
+                <div class="service-card animate-on-scroll" data-delay="200">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.customization.title">Personalización de Vehículos</h3>
+                    <p data-i18n="capabilities.services.customization.description">Adaptación de plataformas a requisitos específicos: armamento, comunicaciones, protección adicional.</p>
+                </div>
+
+                <!-- Compliance -->
+                <div class="service-card animate-on-scroll" data-delay="300">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.compliance.title">Cumplimiento Normativo</h3>
+                    <p data-i18n="capabilities.services.compliance.description">Gestión integral de licencias de exportación, ITAR, EAR y regulaciones internacionales de comercio de defensa.</p>
+                </div>
+
+                <!-- Training -->
+                <div class="service-card animate-on-scroll" data-delay="400">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.training.title">Entrenamiento y Capacitación</h3>
+                    <p data-i18n="capabilities.services.training.description">Programas de formación para operadores, conductores y personal de mantenimiento.</p>
+                </div>
+
+                <!-- Turnkey -->
+                <div class="service-card animate-on-scroll" data-delay="500">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+                            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+                            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 data-i18n="capabilities.services.turnkey.title">Proyectos Llave en Mano</h3>
+                    <p data-i18n="capabilities.services.turnkey.description">Gestión integral desde la especificación hasta la entrega, incluyendo documentación y capacitación.</p>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications animate-on-scroll" data-delay="600">
+                <h3 class="certifications-title" data-i18n="capabilities.certifications.title">Certificaciones y Cumplimiento</h3>
+                <div class="certifications-grid">
+                    <div class="certification-badge">
+                        <span>ISO 9001:2015</span>
+                    </div>
+                    <div class="certification-badge">
+                        <span>ITAR Registered</span>
+                    </div>
+                    <div class="certification-badge">
+                        <span>EAR Compliant</span>
+                    </div>
+                    <div class="certification-badge">
+                        <span>NATO CAGE Code</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WHY CHOOSE US
+    ============================================= -->
+    <section class="section why-us" id="why-us">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="whyUs.sectionTag">Diferenciadores</span>
+                <h2 class="section-title" data-i18n="whyUs.title">Por Qué Elegirnos</h2>
+                <p class="section-subtitle" data-i18n="whyUs.subtitle">Ventajas competitivas que nos distinguen en el mercado global</p>
+            </div>
+
+            <div class="advantages-grid">
+                <!-- Experience -->
+                <div class="advantage-card animate-on-scroll">
+                    <div class="advantage-number">01</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.experience.title">Experiencia Comprobada</h3>
+                        <p data-i18n="whyUs.advantages.experience.description">Más de 15 años facilitando proyectos exitosos de adquisición de vehículos tácticos.</p>
+                    </div>
+                </div>
+
+                <!-- Network -->
+                <div class="advantage-card animate-on-scroll" data-delay="100">
+                    <div class="advantage-number">02</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.network.title">Red Global Certificada</h3>
+                        <p data-i18n="whyUs.advantages.network.description">Acceso directo a los principales fabricantes de vehículos blindados del mundo.</p>
+                    </div>
+                </div>
+
+                <!-- Compliance -->
+                <div class="advantage-card animate-on-scroll" data-delay="200">
+                    <div class="advantage-number">03</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.compliance.title">Cumplimiento Garantizado</h3>
+                        <p data-i18n="whyUs.advantages.compliance.description">Gestión experta de regulaciones ITAR, EAR y normativas internacionales.</p>
+                    </div>
+                </div>
+
+                <!-- Support -->
+                <div class="advantage-card animate-on-scroll" data-delay="300">
+                    <div class="advantage-number">04</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.support.title">Soporte Post-Venta</h3>
+                        <p data-i18n="whyUs.advantages.support.description">Compromiso continuo con repuestos, mantenimiento y asistencia técnica.</p>
+                    </div>
+                </div>
+
+                <!-- Delivery -->
+                <div class="advantage-card animate-on-scroll" data-delay="400">
+                    <div class="advantage-number">05</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.delivery.title">Tiempos Competitivos</h3>
+                        <p data-i18n="whyUs.advantages.delivery.description">Procesos optimizados para entregas eficientes sin comprometer calidad.</p>
+                    </div>
+                </div>
+
+                <!-- Custom -->
+                <div class="advantage-card animate-on-scroll" data-delay="500">
+                    <div class="advantage-number">06</div>
+                    <div class="advantage-content">
+                        <h3 data-i18n="whyUs.advantages.custom.title">Soluciones a Medida</h3>
+                        <p data-i18n="whyUs.advantages.custom.description">Configuraciones personalizadas según requisitos operacionales específicos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT
+    ============================================= -->
+    <section class="section contact" id="contacto">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag" data-i18n="contact.sectionTag">Contacto</span>
+                <h2 class="section-title" data-i18n="contact.title">Solicite Información</h2>
+                <p class="section-subtitle" data-i18n="contact.subtitle">Nuestro equipo está listo para asistirle con sus requerimientos de movilidad táctica</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container animate-on-scroll">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">Nombre Completo</label>
+                                <input type="text" id="name" name="name" required data-i18n-placeholder="contact.form.namePlaceholder" placeholder="Ingrese su nombre" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.form.email">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required data-i18n-placeholder="contact.form.emailPlaceholder" placeholder="correo@ejemplo.com" autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="organization" data-i18n="contact.form.organization">Organización</label>
+                                <input type="text" id="organization" name="organization" data-i18n-placeholder="contact.form.organizationPlaceholder" placeholder="Nombre de su organización" autocomplete="organization">
+                            </div>
+                            <div class="form-group">
+                                <label for="country" data-i18n="contact.form.country">País</label>
+                                <input type="text" id="country" name="country" data-i18n-placeholder="contact.form.countryPlaceholder" placeholder="Seleccione su país" autocomplete="country">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiry-type" data-i18n="contact.form.inquiryType">Tipo de Consulta</label>
+                            <select id="inquiry-type" name="inquiry-type" required>
+                                <option value="" data-i18n="contact.form.inquiryPlaceholder">Seleccione una opción</option>
+                                <option value="general" data-i18n="contact.form.inquiryOptions.general">Consulta General</option>
+                                <option value="quote" data-i18n="contact.form.inquiryOptions.quote">Solicitud de Cotización</option>
+                                <option value="technical" data-i18n="contact.form.inquiryOptions.technical">Información Técnica</option>
+                                <option value="partnership" data-i18n="contact.form.inquiryOptions.partnership">Oportunidad de Asociación</option>
+                                <option value="support" data-i18n="contact.form.inquiryOptions.support">Soporte Post-Venta</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required data-i18n-placeholder="contact.form.messagePlaceholder" placeholder="Describa sus requerimientos o consulta..."></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text" data-i18n="contact.form.submit">Enviar Solicitud</span>
+                            <span class="btn-loading" data-i18n="contact.form.sending">Enviando...</span>
+                            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="form-success">
+                        <div class="success-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="contact.success.title">¡Mensaje Enviado!</h3>
+                        <p data-i18n="contact.success.message">Gracias por contactarnos. Nuestro equipo revisará su solicitud y le responderá a la brevedad posible.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info animate-on-scroll" data-delay="200">
+                    <h3 data-i18n="contact.info.title">Información de Contacto</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:contacto@orbetacticos.com" data-i18n="contact.info.email">contacto@orbetacticos.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <span class="contact-label">Teléfono</span>
+                            <a href="tel:+528115107978" data-i18n="contact.info.phone">+52 81 1510 7978</a>
+                        </div>
+                    </div>
+
+                    <p class="contact-disclaimer" data-i18n="contact.disclaimer">
+                        Toda la información compartida será tratada con estricta confidencialidad. Orbe Tácticos cumple con las normativas internacionales de protección de datos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================= -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Logo & Tagline -->
+                <div class="footer-brand">
+                    <a href="#inicio" class="footer-logo">
+                        <span class="logo-orbe">ORBE</span>
+                        <span class="logo-tacticos">TÁCTICOS</span>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Soluciones de Movilidad Táctica</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4 data-i18n="footer.links.title">Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#nosotros" data-i18n="nav.nosotros">Nosotros</a></li>
+                        <li><a href="#soluciones" data-i18n="nav.soluciones">Soluciones</a></li>
+                        <li><a href="#capacidades" data-i18n="nav.capacidades">Capacidades</a></li>
+                        <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-legal">
+                    <h4 data-i18n="footer.legal.title">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.legal.privacy">Política de Privacidad</a></li>
+                        <li><a href="#" data-i18n="footer.legal.terms">Términos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-contact">
+                    <h4 data-i18n="nav.contacto">Contacto</h4>
+                    <a href="mailto:contacto@orbetacticos.com">contacto@orbetacticos.com</a>
+                </div>
             </div>
 
             <div class="footer-bottom">
-                <p class="copyright">© 2026 Orbe Tácticos. <span data-i18n="rights">Todos los derechos reservados.</span></p>
+                <p class="footer-disclaimer" data-i18n="footer.disclaimer">
+                    La información presentada en este sitio es de carácter general. Todas las transacciones están sujetas a las regulaciones de exportación aplicables.
+                </p>
+                <p class="footer-copyright" data-i18n="footer.copyright">
+                    © 2026 Orbe Tácticos. Todos los derechos reservados.
+                </p>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/website.js"></script>
 </body>
 </html>
